@@ -127,7 +127,7 @@ define(function () {
                                     error: function(){
                                         // server doesn't return anything
                                         alert ("hmm.. Something went wrong");
-                                        window.location.href = 'http://localhost/www/Parking/frontend/#/main';
+                                        window.location.href = '#/main';
                                     }
                                     });
 
