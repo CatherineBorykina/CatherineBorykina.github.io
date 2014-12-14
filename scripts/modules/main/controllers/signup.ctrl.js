@@ -31,7 +31,7 @@ define(function () {
                             alert ("Verification link was sent to your email. Please, confirm it.");
                         }else if (data.statusCode == 402){
                         	alert ("You already sign in" );
-                        	window.location.href = 'http://localhost/Parking/www/frontend/#/home';
+                        	window.location.href = '#/home';
                         }
 
                     },
