@@ -23,7 +23,7 @@ define(function () {
                     success: function(data){
                         if ( data.statusCode === 200 ) {
                             console.log(data.userName);
-                            window.location.href = 'http://localhost/Parking/www/frontend/#/home';
+                            window.location.href = '#/home';
                         } else if ( data.statusCode === 422 ) {
                             alert("Username/Password is incorrect");
                         }
