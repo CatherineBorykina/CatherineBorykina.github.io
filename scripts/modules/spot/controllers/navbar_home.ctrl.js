@@ -11,10 +11,10 @@ define(function () {
                     result: 'nothing'
                 }
             }).done(function(){
-                window.location.href = 'http://localhost/Parking/www/frontend/#/main';
+                window.location.href = '#/main';
             }).fail(function(){
                 alert("hmm.. Something went wrong");
-                window.location.href = 'http://localhost/Parking/www/frontend/#/main';
+                window.location.href = '#/main';
             });
             return false;
         });            
