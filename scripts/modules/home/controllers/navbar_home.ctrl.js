@@ -7,12 +7,12 @@ define(function () {
                        if (user.userName == 'Unknown')
                         {
                             alert("Some mistake :( Please, try to login one more time ." );
-                            window.location.href = 'http://localhost/Parking/www/frontend/#/main';
+                            window.location.href = '#/main';
                         }
                            // <!--//   jQuery("UserName").append(user.userName);-->
                         }).fail( function (user) {
                            alert("Login failed :( Please, try to login one more time ." );
-                           window.location.href = 'http://localhost/Parking/www/frontend/#/main';
+                           window.location.href = '#/main';
                            // <!--//need to make redirection!!!-->
                         });
                 });
@@ -27,10 +27,10 @@ define(function () {
                     result: 'nothing'
                 }
             }).done(function(){
-                window.location.href = 'http://localhost/Parking/www/frontend/#/main';
+                window.location.href = '#/main';
             }).fail(function(){
                 alert("hmm.. Something went wrong");
-                window.location.href = 'http://localhost/Parking/www/frontend/#/main';
+                window.location.href = '#/main';
             });
             return false;
         });            
