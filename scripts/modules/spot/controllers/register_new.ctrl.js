@@ -109,7 +109,7 @@ define(function () {
                                         
                                     }else if (returnedData.result == 'session_is_not_valid'){
                                         alert ("Current session is not valid anymore. Please, login again");
-                                        window.location.href = 'http://localhost/www/Parking/frontend/#/main';
+                                        window.location.href = '#/main';
                                     }else if (returnedData.result == 'success_registration') {
  
                                         $('#success').html("<div class='alert alert-success center-block'>");
