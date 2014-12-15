@@ -2,20 +2,26 @@ define(function () {
     return function () {
 
             jQuery(document).ready(function(){ 
-                  jQuery.ajax("http://airpark-kborykina.rhcloud.com/check_user_session.php").done( function(user){
+                
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "http://airpark-kborykina.rhcloud.com/check_user_session.php",
+                    success: function(user){
                         document.getElementById("UserName").innerHTML = "Hello, " + user.userName + "! Look nice :)";
-                       if (user.userName == 'Unknown')
+                        if (user.userName == 'Unknown')
                         {
                             alert("Some mistake :( Please, try to login one more time ." );
                             window.location.href = '#/main';
                         }
-                           // <!--//   jQuery("UserName").append(user.userName);-->
-                        }).fail( function (user) {
-                           alert("Login failed :( Please, try to login one more time ." );
+                    },
+                    error: function(){
+                          alert("Login failed :( Please, try to login one more time ." );
                            window.location.href = '#/main';
-                           // <!--//need to make redirection!!!-->
-                        });
+                    }
                 });
+                
+            });
 
         $("#logout").click(function(){
 
